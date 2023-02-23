@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="quiz">
+    <link rel="stylesheet" href="styles.css">
+    <title>Medicine Cat Application</title>
+</head>
+
+
+
+<body>
+    <header>
+        <img src="https://jesseroaln.com/wp-content/uploads/2022/11/cropped-cropped-cropped-logo-transparent.png"
+            id="logo">
+        <h1>Medicine Cat Application</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#applicant-info">INFO</a></li>
+                <li><a href="#true-false-questions">True/False</a></li>
+                <li><a href="#multiple-choice">Part 2</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <Main>
+        <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+            <section role="region" aria-labelledby="applicant-info">
+                <h2 id="applicant-info">Applicant's info</h2>
+            </section>
+            <div class="info">
+                <label for="name">Name:</label>
+                <input id="name" type="text" name="name" placeholder="cat's name here"></input>
+            </div>
+            <div class="info">
+                <label for="rank">Rank:</label>
+                <input id="rank" type="text" name="rank" placeholder=" current rank here"></input>
+            </div>
+            <div class="info">
+                <label for="age-of-cat">Age:<span class="sr-only">(Cat's age in moons)</span></label>
+                <input id="age-of-cat" type="text" name="age-of-cat" placeholder="enter age in moons"></input>
+            </div>
+            <section role="region" aria-labelledby="true-false-questions">
+                <h2 id="true-false-questions">True/False</h2>
+                <div class="question-block">
+                    <p>1</p>
+                    <fieldset class="question" name="question1">
+                        <legend>Water mint can be used to treat bellyache.</legend>
+                        <ul class="answers-list">
+                            <li><label for="q1-a1"><input type="radio" id="q1-a1" value="true"
+                                        name="answer1">True</label></li>
+                            <li><label for="q1-a2"><input type="radio" id="q1-a2" value="false"
+                                        name="answer1">False</label></li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="question-block">
+                    <p>2</p>
+                    <fieldset class="question" name="question2">
+                        <legend>Chamomile is used in travelling herb mixtures.</legend>
+                        <ul class="answers-list">
+                            <li><label for="q2-a1"><input type="radio" id="q2-a1" value="true"
+                                        name="answer2">True</label></li>
+                            <li><label for="q2-a2"><input type="radio" id="q2-a2" value="false"
+                                        name="answer2">False</label></li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="question-block">
+                    <p>3</p>
+                    <fieldset class="question" name="question3">
+                        <legend>Borage is perfect for travelling mixtures.</legend>
+                        <ul class="answers-list">
+                            <li><label for="q3-a1"><input type="radio" id="q3-a1" value="true"
+                                        name="answer3">True</label></li>
+                            <li><label for="q3-a2"><input type="radio" id="q3-a2" value="false"
+                                        name="answer3">False</label></li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </section>
+            <section role="region" aria-labelledby="multiple-choice">
+                <h2 id="multiple-choice">Multiple Choice</h2>
+                <div class="formrow">
+                    <div class="question-block">
+                        <label for="select1">Which herb can help damaged eyes?</label>
+                    </div>
+                    <div class="answer">
+                        <select required id="select1" name="select1">
+                            <option value="">Select an option</option>
+                            <option value="marigold">marigold leaves</option>
+                            <option value="celandine">Celandine</option>
+                            <option value="lavender">lavender</option>
+                        </select>
+                    </div>
+                    <div class="question-block">
+                        <label for="select2">What would you use to treat a rat bite?</label>
+                    </div>
+                    <div class="answer"></div>
+                    <select id="select2" name="select2" required>
+                        <option value="">Select an option</option>
+                        <option value=burdock">burdock root</option>
+                        <option value="burnet">Burnet leaves</option>
+                        <option value="borage">borage root</option>
+                    </select>
+                    <div class="question-block">
+                        <label for="select3">Which part of the catmint plant is used to treat greencough?</label>
+                    </div>
+                    <div class="answer">
+                        <select required id="select3" name="select3">
+                            <option value="">Select an option</option>
+                            <option value="stem">the stems</option>
+                            <option value="leaves">the leaves</option>
+                            <option value="flower">the flower petals</option>
+                        </select>
+                    </div>
+                    <div class="question-block">
+                        <label for="response1">Three cats have returned from a border patrol with varying injuries.
+                            <b>Slatepaw</b> has
+                            a dislocated shoulder, and a nicked ear. <b>Aloeheart</b> has a bite wound on his flank,
+                            though the
+                            bleeding has already stopped. <b>Willowstep</b> is leaning against Aloeheart, her eyes
+                            glazed, and
+                            a nasty cut behind her ear that's still bleeding. Which cat should you treat first?</label>
+                    </div>
+                    <div class="answer">
+                        <textarea id="response1" name="response1" cols="60" rows="4"
+                            placeholder="type your answer here"></textarea>
+                    </div>
+                    <div class="question-block">
+                        <label for="response2">How would you treat each cats' wounds from the border fight?</label>
+                    </div>
+                    <div class="answer">
+                        <textarea id="response2" name="response2" cols="60" rows="4"
+                            placeholder="type your answer here"></textarea>
+                    </div>
+                </div>
+            </section>
+            <input type="submit" value="submit">
+        </form>
+    </Main>
+    <footer>
+        <address>
+            <a href="https://github.com/kayletesh?tab=repositories">Designed by Kayle</a> <br />
+            <!--add link here--> Medicine cat form<br />
+            solo gitHub project<br />
+
+            based on accessibility quiz course<br />
+
+        </address>
+    </footer>
+</body>
